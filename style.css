@@ -1,0 +1,275 @@
+.container-fluid .landingContainer {
+  margin: -15px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+.navbar-default {
+  background: #00549f;
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
+}
+
+.navbar-default {
+  color: #fff;
+  border: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-default .nav > li > a {
+  padding: 15px 15px !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+  background-color: transparent !important;
+}
+
+.navbar-default .navbar-brand {
+  padding: 15px 12px !important;
+}
+
+.navbar-default .navbar-nav > li > a:visited {
+  color: #fff;
+  background: #363636;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-default .navbar-nav > .open > a:hover {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-default .navbar-form {
+  border: none;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+  text-decoration: underline !important;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar-default .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+  background-color: transparent;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.distinctive {
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.distinctive img {
+  max-width: 130px;
+}
+
+.navbar-nav .title {
+  padding-left: 20px !important;
+}
+
+.green .text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 5px;
+}
+
+.green .text:hover {
+  text-decoration: underline;
+}
+
+.green .text:hover {
+  text-decoration: underline;
+}
+
+.yellow .text {
+  text-overflow: ellipsis;
+  width: 82px;
+  white-space: nowrap;
+  overflow: hidden;
+  float: left;
+  padding-left: 5px;
+}
+
+.yellow {
+  background: #db9635;
+}
+
+.yellow .text {
+  text-overflow: ellipsis;
+  /* will make [...] at the end */
+  width: 82px;
+  /* change to your preferences */
+  white-space: nowrap;
+  /* paragraph to one line */
+  overflow: hidden;
+  /* older browsers */
+  float: left;
+  padding-left: 5px;
+}
+
+.yellow .text:hover {
+  text-decoration: underline;
+}
+
+.red {
+  background: #bc112e;
+}
+
+.green {
+  background: #68953b;
+}
+
+.navColor {
+  background: #4b7bab;
+}
+
+.white {
+  color: #fff;
+}
+
+.search {
+  height: 60px;
+  padding: 13px 0 0 0;
+}
+
+.specialBlueColor {
+  background: #4b7bab;
+}
+
+.searchBar .btn-default {
+  min-width: 150px;
+  height: 34px;
+  background: #00549f !important;
+  color: #fff;
+}
+
+.btn {
+  border-radius: 0px;
+}
+
+.btn-default:hover {
+  color: #fff;
+  background: #013360;
+}
+
+.btn-default:visited {
+  background: #013360;
+  color: #fff;
+}
+
+.kingBlueColor {
+  background: #012b50;
+}
+
+.white {
+  color: #fff;
+}
+
+.border-left-right-cero {
+  border-left: 0;
+  border-right: 0;
+}
+
+/* Todo "repeat-animation" es una plantilla de angular que habia encontrado en internet hace mucho tiempo */
+.repeat-animation.ng-enter,
+.repeat-animation.ng-leave,
+.repeat-animation.ng-move {
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
+  -o-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  position: relative;
+}
+
+.repeat-animation.ng-enter {
+  left: 10px;
+  opacity: 0;
+}
+
+.repeat-animation.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}
+
+.repeat-animation.ng-leave {
+  left: 10px;
+  opacity: 1;
+}
+
+.repeat-animation.ng-leave.ng-leave-active {
+  left: -10px;
+  opacity: 0;
+}
+
+.repeat-animation.ng-move {
+  opacity: 0.5;
+}
+
+.repeat-animation.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+.home .center-block {
+  width: 82px;
+}
+
+.btn-success {
+  min-width: 130px;
+  height: 45px;
+  background: #68953b;
+  border-color: transparent;
+}
+
+.btn-success:hover {
+  background: #3e5d1f;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-default .navbar-brand {
+    padding: 0 !important;
+    margin-bottom: 40px;
+  }
+
+  .navbar-default {
+    background-color: #fff !important;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1500px) {
+  .img-responsive {
+    height: 12rem;
+  }
+
+  .distinctive {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .repeat-animation.ng-enter,
+  .repeat-animation.ng-leave,
+  .repeat-animation.ng-move {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar-fixed-top">
+      <div class="container-fluid">
+        <!--Menu general-->
+        <div class="row" style="background: #4a7bab">
+          <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3 hidden-xs hidden-sm" style="background: #fff">
+            <div style="height: 110px">
+              <a href="#">
+                <!-- Al final he decidido usar el SVG de su pagina, ya que la imagen perdia mucha calidad -->
+                <img src="images/LogoSVG.svg" class="img-responsive" style="width: 85%; text-align: center" />
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0px">
+                <nav class="navbar navbar-default" role="navigation">
+                  <div class="navbar-header">
+                    <div class="row">
+                      <div class="col-xs-11 col-sm-11">
+                        <div class="hidden-md hidden-lg">
+                          <div>
+                            <img src="images/LogoSVG.svg" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-1 col-sm-1">
+                        <button type="button" class="navbar-toggle">
+                          <span class="sr-only"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="collapse navbar-collapse">
+                    <div class="distinctive pull-left"></div>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="principalBlueColor five">
+                        <a> <span class="fa fa-shopping-bag" style="padding-right: 5px"></span>Ver todos los productos </a>
+                      </li>
+
+                      <li id="menuEmpresa" class="yellow one">
+                        <a>
+                          <span class="fa fa-building-o" style="padding-right: 5px"></span>
+                          Cliente
+                          <b class="caret"></b>
+                        </a>
+                      </li>
+
+                      <li class="green">
+                        <a>
+                          <span style="padding-right: 5px">
+                            <!-- Tambien he tomado el icono del siclick de la pagina -->
+                            <img class="imagen" style="height: 16px !important; width: 16px !important" src="images/favicon_siclick.ico" /> </span
+                          >siclik
+                        </a>
+                      </li>
+
+                      <li class="red">
+                        <a>
+                          <span class="fa fa-ticket" style="padding-right: 5px"></span>
+                          Soporte
+                        </a>
+                      </li>
+
+                      <li id="shoppingCartBG" class="navColor two">
+                        <a>
+                          <span id="shoppingCart" class="glyphicon glyphicon-shopping-cart"></span>
+                          <b id="shoppingCartAmount">&nbsp;0</b>
+                        </a>
+                      </li>
+
+                      <li class="red" style="padding-right: 5px">
+                        <a dropdown-toggle>
+                          <span id="userData" class="glyphicon glyphicon-user"></span>
+                          <b class="caret"></b>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 specialBlueColor search three">
+                <form>
+                  <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="input-group">
+                      <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="Busca un producto..." size="255" />
+                        <i class="form-control-feedback glyphicon glyphicon-search"></i>
+                      </div>
+                      <span class="input-group-btn searchBar">
+                        <button class="btn btn-default kingBlueColor white" type="submit">Buscar</button>
+                      </span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div style="padding-top: 150px" class="container">
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h2 style="float: left">Suscripciones</h2>
+        </div>
+
+        <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <label>Filtrar por:</label>
+          <select class="form-control">
+            <option value="">Todos los fabricantes</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <div>Precios mas IVA.</div>
+        <br />
+
+        <table class="table table-hover table-responsive border-left-right-cero">
+          <!-- Un TH vacio para las dos barras que componen el header de la tabla -->
+          <th></th>
+
+          <!-- Office 365 Business Premium -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/365.png" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>Office 365 Business Premium</b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> Suscripcion
+                  <br />
+                  <label for="">Fabricante del producto:</label> Microsoft
+                  <br />
+                  <label for="">Articulo Id:</label> 031c9-e47
+                  <br />
+                  <label for="">Precio:</label> $10.53
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Azure Active Directory Basic  Government Pricing -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Azure.png" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>Azure Active Directory Basic  Government Pricing</b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> A robust set of capabilities to empower organizations with more demanding needs on identity and access
+                  management.
+                  <br />
+                  <label for="">Fabricante del producto:</label> Microsoft
+                  <br />
+                  <label for="">Articulo Id:</label> 0a798-3cd
+                  <br />
+                  <label for="">Precio:</label> $0.89
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Exchange Online Protection  Government Pricing -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Default.png" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>Exchange Online Protection Government Pricing</b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> Advanced anti-malware and anti-spam protection for email deployments.
+                  <br />
+                  <label for="">Fabricante del producto:</label> Microsoft
+                  <br />
+                  <label for="">Articulo Id:</label> 0cca4-4d6
+                  <br />
+                  <label for="">Precio:</label> $0.89
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Project Pro for Office 365 (Government Pricing) -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/365.png" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>Project Pro for Office 365 (Government Pricing)</b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> [Sin descripción]
+                  <br />
+                  <label for="">Fabricante del producto:</label> Microsoft
+                  <br />
+                  <label for="">Articulo Id:</label> 11e3c-9a9
+                  <br />
+                  <label for="">Precio:</label> $22.22
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Skype for Business Online  Plan 2 -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Default.png" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>Skype for Business Online Plan 2</b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> Unified communications plan with advanced capabilities including enterprise Instant Messaging, Presence and
+                  online meetings with audio and video conferencing and multiparty data sharing.
+                  <br />
+                  <label for="">Fabricante del producto:</label> Microsoft
+                  <br />
+                  <label for="">Articulo Id:</label> 14c61-739
+                  <br />
+                  <label for="">Precio:</label> $4.63
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Autodesk AutoCAD Commercial Single-user Annual Subscription Renewal Recurring with Basic Support -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Autocad.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>Autodesk AutoCAD Commercial Single-user Annual Subscription Renewal Recurring with Basic Support </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> Autodesk AutoCAD Commercial Single-user Annual Subscription Renewal Recurring with Basic Support
+                  <br />
+                  <label for="">Fabricante del producto:</label> Autodesk
+                  <br />
+                  <label for="">Articulo Id:</label> 001I1-004640-T585
+                  <br />
+                  <label for="">Precio:</label> $1175
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Annual Auto-Renew Subscription with -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Autocad.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Annual Auto-Renew Subscription with </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Annual Auto-Renew Subscription with
+                  Advanced Support
+                  <br />
+                  <label for="">Fabricante del producto:</label> Autodesk
+                  <br />
+                  <label for="">Articulo Id:</label> 001I1-003126-T227
+                  <br />
+                  <label for="">Precio:</label> $1225
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- AutoCAD Commercial Single-user Monthly Subscription Renewal Recurring -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Autocad.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>AutoCAD Commercial Single-user Monthly Subscription Renewal Recurring </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> Autodesk AutoCAD Commercial Single-user Monthly Subscription Renewal Recurring with Advanced Support
+                  <br />
+                  <label for="">Fabricante del producto:</label> Autodesk
+                  <br />
+                  <label for="">Articulo Id:</label> 001I1-001563-T142
+                  <br />
+                  <label for="">Precio:</label> $160
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Annual Auto-Renew Subscription with -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Autocad.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Annual Auto-Renew Subscription with </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Annual Auto-Renew Subscription with
+                  Advanced Support SPZD
+                  <br />
+                  <label for="">Fabricante del producto:</label> Autodesk
+                  <br />
+                  <label for="">Articulo Id:</label> 001I1-006876-T671
+                  <br />
+                  <label for="">Precio:</label> $1225
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Monthly Auto-Renew Subscription wit -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Autocad.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Monthly Auto-Renew Subscription wit </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Monthly Auto-Renew Subscription with
+                  Advanced Support
+                  <br />
+                  <label for="">Fabricante del producto:</label> Autodesk
+                  <br />
+                  <label for="">Articulo Id:</label> 001I1-006286-T605
+                  <br />
+                  <label for="">Precio:</label> $155
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- VCPP 1800 Monthly Rental overage charges -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Vmware.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>VCPP 1800 Monthly Rental overage charges </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> [Sin descripción]
+                  <br />
+                  <label for="">Fabricante del producto:</label> VMWARE
+                  <br />
+                  <label for="">Articulo Id:</label> VSPP-1800-1-RENT-S
+                  <br />
+                  <label for="">Precio:</label> $0.9
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- VCPP 3600 Monthly Rental overage charges -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Vmware.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>VCPP 3600 Monthly Rental overage charges </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> [Sin descripción]
+                  <br />
+                  <label for="">Fabricante del producto:</label> VMWARE
+                  <br />
+                  <label for="">Articulo Id:</label> VSPP-3600-1-RENT-S
+                  <br />
+                  <label for="">Precio:</label> $0.78
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- VCPP 10800 Monthly Rental overage charges -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Vmware.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>VCPP 10800 Monthly Rental overage charges </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> [Sin descripción]
+                  <br />
+                  <label for="">Fabricante del producto:</label> VMWARE
+                  <br />
+                  <label for="">Articulo Id:</label> VSPP-10800-1-RENT-S
+                  <br />
+                  <label for="">Precio:</label> $0.72
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- VCPP 18000 Monthly Rental overage charges -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Vmware.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>VCPP 18000 Monthly Rental overage charges </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> [Sin descripción]
+                  <br />
+                  <label for="">Fabricante del producto:</label> VMWARE
+                  <br />
+                  <label for="">Articulo Id:</label> VSPP-18000-1-RENT-S
+                  <br />
+                  <label for="">Precio:</label> $0.66
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- VCPP 30000 Monthly Rental overage charges -->
+          <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/Vmware.jpg" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>VCPP 30000 Monthly Rental overage charges </b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> [Sin descripción]
+                  <br />
+                  <label for="">Fabricante del producto:</label> VMWARE
+                  <br />
+                  <label for="">Articulo Id:</label> VSPP-30000-1-RENT-S
+                  <br />
+                  <label for="">Precio:</label> $0.6
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Template -->
+          <!-- <tr class="repeat-animation">
+            <td>
+              <div class="hidden-xs hidden-sm">
+                <br />
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-0 col-sm-0 col-md-2 col-lg-2">
+                  <div class="text-center center-block">
+                    <img src="./images/365.png" style="width: 150px" width="150" />
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-6 col-lg-6">
+                  <div>
+                    <h3><b>365</b></h3>
+                  </div>
+                  <label for="">Descripcion:</label> Descripcion del producto
+                  <br />
+                  <label for="">Fabricante del producto:</label> Microsoft
+                  <br />
+                  <label for="">Articulo Id:</label> 031c9-e47
+                  <br />
+                  <label for="">Precio:</label> $10.53
+                  <br />
+                </div>
+
+                <div class="form-group col-xs-0 col-sm-0 col-md-4 col-lg-4 softBlueColor" style="margin: -7px; margin-bottom: 10px">
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div>
+                        <h4><b>Configura tus productos.</b></h4>
+                      </div>
+                      <br />
+
+                      <form name="frmCantidad" id="frmCantidad">
+                        <div class="form-group">
+                          <label for="Cantidad">Cuantos quieres?</label> Disponible de 1 a 100
+
+                          <div class="input-group">
+                            <span class="input-group-addon green white">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </span>
+                            <input
+                              id="Cantidad"
+                              name="Cantidad"
+                              type="number"
+                              class="form-control"
+                              placeholder="Numero de licencias"
+                              max="100"
+                              min="1"
+                              size="5"
+                              maxlength="5"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div style="float: right !important">
+                          <label for="" title="Cantidad por precio">Total:</label>
+                          <b> $0.00 </b>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <button class="btn btn-success btn-block addOption">Agregar al carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr> -->
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
